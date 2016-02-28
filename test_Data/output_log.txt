@@ -1,0 +1,30 @@
+Initialize engine version: 5.2.2f1 (3757309da7e7)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GT 720 (ID=0x1286)
+    Vendor:   NVIDIA
+    VRAM:     974 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Michael\Videos\NiceCreamGuys\NiceCreamGuys\test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Michael\Videos\NiceCreamGuys\NiceCreamGuys\test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Michael\Videos\NiceCreamGuys\NiceCreamGuys\test_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Michael\Videos\NiceCreamGuys\NiceCreamGuys\test_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Michael\Videos\NiceCreamGuys\NiceCreamGuys\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Michael\Videos\NiceCreamGuys\NiceCreamGuys\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Michael\Videos\NiceCreamGuys\NiceCreamGuys\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Michael\Videos\NiceCreamGuys\NiceCreamGuys\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Michael\Videos\NiceCreamGuys\NiceCreamGuys\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Michael\Videos\NiceCreamGuys\NiceCreamGuys\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Michael\Videos\NiceCreamGuys\NiceCreamGuys\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Michael\Videos\NiceCreamGuys\NiceCreamGuys\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Michael\Videos\NiceCreamGuys\NiceCreamGuys\test_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.041 seconds
+desktop: 1440x900 60Hz; virtual: 1440x900 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\Michael\Videos\NiceCreamGuys\NiceCreamGuys\test_Data\Managed\System.dll (this message is harmless)
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: b08 -> priority: 1 
+  Thread -> id: eac -> priority: 1 
