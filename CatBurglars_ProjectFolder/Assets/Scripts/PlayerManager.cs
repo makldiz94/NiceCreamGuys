@@ -5,19 +5,6 @@ public class PlayerManager : MonoBehaviour {
 
     int clickCount = 0;
 
-	void Awake(){
-		
-	}
-
-    // Use this for initialization
-    void Start () {
-	
-	}
-
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
     void OnTriggerStay(Collider col)
     {
@@ -45,6 +32,7 @@ public class PlayerManager : MonoBehaviour {
     void OnTriggerEnter(Collider col)
     {
 		if (col.transform.gameObject.tag == "Exit" && clickCount == 2)
+
         {
             Debug.Log("Game is over!!!");
             Death();

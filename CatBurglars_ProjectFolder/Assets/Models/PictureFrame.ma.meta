@@ -4,7 +4,19 @@ timeCreated: 1456978440
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    100000: back
+    100002: left
+    100004: //RootNode
+    100006: pictureFrame
+    400000: back
+    400002: left
+    400004: //RootNode
+    400006: pictureFrame
+    2300000: pictureFrame
+    3300000: pictureFrame
+    4300000: pictureFrame
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
