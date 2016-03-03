@@ -36,7 +36,7 @@ public class TestGuardWalk : MonoBehaviour {
         // If the player leaves the trigger zone...
         if (other.gameObject == player)
             GotoNextPoint();
-    }
+    } 
 
 
     void GotoNextPoint()

@@ -3,15 +3,53 @@ using System.Collections;
 
 public class PlayerManager : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    int clickCount = 0;
+
+	void Awake(){
+		
+	}
+
+    // Use this for initialization
+    void Start () {
 	
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 	
 	}
+
+    void OnTriggerStay(Collider col)
+    {
+        if (col.transform.gameObject.tag == "McGuffin")
+        {
+            if (Input.GetKeyDown(KeyCode.E) && clickCount == 0)
+            {
+                clickCount++;
+                //Destroy(this.gameObject);
+            }
+            else if (Input.GetKeyDown(KeyCode.E) && clickCount == 1)
+            {
+                clickCount++;
+                Destroy(col.gameObject);
+            }
+
+           /* if (col.transform.gameObject.tag == "Exit")
+            {
+                Debug.Log("Game is over!!!");
+                Death();
+            } */
+        }
+    }
+
+    void OnTriggerEnter(Collider col)
+    {
+		if (col.transform.gameObject.tag == "Exit" && clickCount == 2)
+        {
+            Debug.Log("Game is over!!!");
+            Death();
+        }
+    } 
 
     void OnCollisionEnter(Collision col)
     {
@@ -25,5 +63,6 @@ public class PlayerManager : MonoBehaviour {
     {
         Destroy(this.gameObject);
         Debug.Log("Application load game over screen");
+        //Application.LoadLevel("Tevin (test area)");
     }
 }
