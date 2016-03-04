@@ -6,9 +6,12 @@ public class PlayerManager : MonoBehaviour {
 
     int clickCount = 0;
     bool opened = false;
-    public Text masterHUD;
+    public Image masterHUD;
     public Text objectiveHUD;
     public Image jewelImage;
+	public Text caseHUD;
+	public Text escapeHUD;
+
 
 
 
@@ -19,34 +22,32 @@ public class PlayerManager : MonoBehaviour {
 
     void OnTriggerStay(Collider col)
     {
-        if (col.transform.gameObject.tag == "McGuffin")
-        {
-            if(clickCount == 0 && opened == false)
-            {
-                Destroy(jewelImage);
-                objectiveHUD.text = "Open the case";
-                opened = true;
-            }
-            if (Input.GetKeyDown(KeyCode.E) && clickCount == 0)
-            {
-                objectiveHUD.text = "Collect the jewel!";
-                clickCount++;
-                //Destroy(this.gameObject);
-            }
-            else if (Input.GetKeyDown(KeyCode.E) && clickCount == 1)
-            {
-                objectiveHUD.text = "Escape back to the beginning!";
-                clickCount++;
-                Destroy(col.gameObject);
-            }
+		if (col.transform.gameObject.tag == "McGuffin") {
+			if (clickCount == 0 && opened == false) {
+				caseHUD.text = "Press E to unlock.";
+				Destroy (jewelImage);
+				Destroy (objectiveHUD);
+				opened = true;
+			}
+			if (Input.GetKeyDown (KeyCode.E) && clickCount == 0) {
+				caseHUD.text = "Press E to pick up.";
+				clickCount++;
+				//Destroy(this.gameObject);
+			} else if (Input.GetKeyDown (KeyCode.E) && clickCount == 1) {
+				Destroy (caseHUD);
+				escapeHUD.text = "Escape to the drop zone!";
+				clickCount++;
+				Destroy (col.gameObject);
+			}	
 
-           /* if (col.transform.gameObject.tag == "Exit")
+			/* if (col.transform.gameObject.tag == "Exit")
             {
                 Debug.Log("Game is over!!!");
                 Death();
             } */
-        }
-    }
+		} 
+	
+	}
 
     void OnTriggerEnter(Collider col)
     {
@@ -75,8 +76,8 @@ public class PlayerManager : MonoBehaviour {
 
     IEnumerator HowToPlay()
     {
-        yield return new WaitForSeconds(2.5f);
-        masterHUD.text = " ";
+        yield return new WaitForSeconds(5f);
+		Destroy (masterHUD);
         //objectiveHUD.text = "Steal the Yarn!";
     }
 }

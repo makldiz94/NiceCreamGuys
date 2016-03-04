@@ -29,8 +29,8 @@ public class TestGuardWalk : MonoBehaviour {
     {
         if (col.transform.gameObject.tag == "Player")
         {
-            spottedText.text = "You've been Spotted!";
-            agent.speed = 12;
+            spottedText.text = "Detection Status: Spotted!";
+            agent.speed = 20;
             agent.destination = player.position;
         } 
     }
@@ -54,7 +54,7 @@ public class TestGuardWalk : MonoBehaviour {
 
         // Set the agent to go to the currently selected destination.
         agent.destination = points[destPoint].position;
-        spottedText.text = "Clear";
+        spottedText.text = "Detection Status: Clear";
         agent.speed = 7;
 
         // Choose the next point in the array as the destination,

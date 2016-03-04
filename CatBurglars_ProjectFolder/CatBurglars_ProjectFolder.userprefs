@@ -1,9 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Glass.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TestGuardWalk.cs">
     <Files>
-      <File FileName="Assets\Scripts\PlayerManager.cs" Line="65" Column="1" />
+      <File FileName="Assets\Scripts\PlayerManager.cs" Line="48" Column="5" />
       <File FileName="Assets\Scripts\Glass.cs" Line="26" Column="5" />
+      <File FileName="Assets\Scripts\TestGuardWalk.cs" Line="33" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
