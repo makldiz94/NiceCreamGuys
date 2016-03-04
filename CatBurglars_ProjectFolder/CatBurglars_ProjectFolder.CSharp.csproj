@@ -60,6 +60,9 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="Assembly-UnityScript-firstpass">
+      <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="CatBurglars_ProjectFolder.CSharp.Plugins.csproj">
@@ -68,11 +71,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Materials\Skybox\Scripts\FSPlayer.cs" />
+    <Compile Include="Assets\Scripts\Glass.cs" />
     <Compile Include="Assets\Scripts\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\TestGuardWalk.cs" />
     <Compile Include="Assets\Scripts\loadMain.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Materials\Skybox\Readme\Readme.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />

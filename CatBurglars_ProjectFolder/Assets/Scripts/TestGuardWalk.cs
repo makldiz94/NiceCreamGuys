@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class TestGuardWalk : MonoBehaviour {
@@ -10,6 +11,7 @@ public class TestGuardWalk : MonoBehaviour {
     public bool playerInSight = false;
 
     private NavMeshAgent agent;
+    public Text spottedText;
 
     void Awake()
     {
@@ -27,6 +29,8 @@ public class TestGuardWalk : MonoBehaviour {
     {
         if (col.transform.gameObject.tag == "Player")
         {
+            spottedText.text = "You've been Spotted!";
+            agent.speed = 12;
             agent.destination = player.position;
         } 
     }
@@ -35,7 +39,10 @@ public class TestGuardWalk : MonoBehaviour {
     {
         // If the player leaves the trigger zone...
         if (other.gameObject == player)
+        {
             GotoNextPoint();
+        }
+        
     } 
 
 
@@ -47,6 +54,8 @@ public class TestGuardWalk : MonoBehaviour {
 
         // Set the agent to go to the currently selected destination.
         agent.destination = points[destPoint].position;
+        spottedText.text = "Clear";
+        agent.speed = 7;
 
         // Choose the next point in the array as the destination,
         // cycling to the start if necessary.
