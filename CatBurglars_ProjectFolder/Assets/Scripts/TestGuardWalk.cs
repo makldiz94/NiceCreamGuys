@@ -7,6 +7,8 @@ public class TestGuardWalk : MonoBehaviour {
     public Transform[] points;
     public Transform player;
     private int destPoint = 0;
+	public AudioClip mp3stoprightthere;
+	private AudioSource source;
 
     public bool playerInSight = false;
 
@@ -16,6 +18,7 @@ public class TestGuardWalk : MonoBehaviour {
     void Awake()
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
+		source = GetComponent<AudioSource> ();
     }
 
     void Start()
@@ -30,6 +33,7 @@ public class TestGuardWalk : MonoBehaviour {
         if (col.transform.gameObject.tag == "Player")
         {
             spottedText.text = "Detection Status: Spotted!";
+			source.Play();
             agent.speed = 20;
             agent.destination = player.position;
         } 

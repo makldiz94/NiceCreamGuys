@@ -11,9 +11,13 @@ public class PlayerManager : MonoBehaviour {
     public Image jewelImage;
 	public Text caseHUD;
 	public Text escapeHUD;
+	public AudioClip mp3Thecatsmeow;
+	private AudioSource source2;
 
-
-
+	void Awake()
+	{
+		source2 = GetComponent<AudioSource> ();
+	}
 
     void Start()
     {
@@ -30,6 +34,7 @@ public class PlayerManager : MonoBehaviour {
 				opened = true;
 			}
 			if (Input.GetKeyDown (KeyCode.E) && clickCount == 0) {
+				source2.Play();
 				caseHUD.text = "Press E to pick up.";
 				clickCount++;
 				//Destroy(this.gameObject);
@@ -38,6 +43,7 @@ public class PlayerManager : MonoBehaviour {
 				escapeHUD.text = "Escape to the drop zone!";
 				clickCount++;
 				Destroy (col.gameObject);
+
 			}	
 
 			/* if (col.transform.gameObject.tag == "Exit")
