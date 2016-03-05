@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class TestGuardWalk : MonoBehaviour {
@@ -27,6 +28,15 @@ public class TestGuardWalk : MonoBehaviour {
         GotoNextPoint();
     }
 
+
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.transform.gameObject.tag == "Player")
+        {
+            Debug.Log("I am touching you");
+            Death();
+        }
+    }
 
     void OnTriggerStay(Collider col)
     {
@@ -74,5 +84,10 @@ public class TestGuardWalk : MonoBehaviour {
         if (agent.remainingDistance < 0.5f)
             GotoNextPoint();
     }
+    void Death()
+    {
+        SceneManager.LoadScene(3);
+    }
+
 
 }

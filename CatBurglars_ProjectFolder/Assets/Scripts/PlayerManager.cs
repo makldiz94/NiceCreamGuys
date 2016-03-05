@@ -53,6 +53,14 @@ public class PlayerManager : MonoBehaviour {
 	
 	}
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
     void OnTriggerEnter(Collider col)
     {
 		if (col.transform.gameObject.tag == "Exit" && clickCount == 2)
@@ -80,7 +88,8 @@ public class PlayerManager : MonoBehaviour {
     {
         if (col.transform.gameObject.tag == "Guard")
         {
-            Death();
+            //Debug.Log("I am touching you");
+            //Death();
         }
     }
 
