@@ -38,12 +38,20 @@ public class TestGuardWalk : MonoBehaviour {
         }
     }
 
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.transform.gameObject.tag == "Player")
+        {
+            source.Play();
+        }
+    }
+
     void OnTriggerStay(Collider col)
     {
         if (col.transform.gameObject.tag == "Player")
         {
             spottedText.text = "Detection Status: Spotted!";
-			source.Play();
+			//source.Play();
             agent.speed = 15;
             agent.destination = player.position;
             //agent.SetDestination(player.position);
