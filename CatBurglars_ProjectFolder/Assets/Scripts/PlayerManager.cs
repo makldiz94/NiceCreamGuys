@@ -6,6 +6,7 @@ public class PlayerManager : MonoBehaviour {
 
     int clickCount = 0;
     bool opened = false;
+    bool showText = false;
     public Image masterHUD;
     public Text objectiveHUD;
     public Image jewelImage;
@@ -26,19 +27,20 @@ public class PlayerManager : MonoBehaviour {
 
     void OnTriggerStay(Collider col)
     {
+        showText = true;
 		if (col.transform.gameObject.tag == "McGuffin") {
-			if (clickCount == 0 && opened == false) {
+            if (clickCount == 0 && opened == false && showText == true) {
 				caseHUD.text = "Press E to unlock.";
 				Destroy (jewelImage);
 				Destroy (objectiveHUD);
 				opened = true;
 			}
-			if (Input.GetKeyDown (KeyCode.E) && clickCount == 0) {
+			if (Input.GetKeyDown (KeyCode.E) && clickCount == 0 && showText == true) {
 				source2.Play();
 				caseHUD.text = "Press E to pick up.";
 				clickCount++;
 				//Destroy(this.gameObject);
-			} else if (Input.GetKeyDown (KeyCode.E) && clickCount == 1) {
+			} else if (Input.GetKeyDown (KeyCode.E) && clickCount == 1 && showText == true) {
 				Destroy (caseHUD);
 				escapeHUD.text = "Escape to the drop zone!";
 				clickCount++;
@@ -64,6 +66,19 @@ public class PlayerManager : MonoBehaviour {
             Death();
         }
     } 
+
+
+    void OnTriggerExit(Collider col)
+    {
+        if (col.transform.gameObject.tag == "McGuffin")
+        {
+            showText = false;
+            if (showText == false)
+            {
+                caseHUD.text = " ";
+            }
+        }
+    }
 
     void OnCollisionEnter(Collision col)
     {

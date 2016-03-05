@@ -1,0 +1,191 @@
+fileFormatVersion: 2
+guid: fd415402e30bba54cafc7225ab32ab63
+timeCreated: 1457139729
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: back
+    100002: bottom
+    100004: Flashlight:button
+    100006: Flashlight:dome
+    100008: Flashlight:light
+    100010: Flashlight:polySurface1
+    100012: Flashlight:polySurface2
+    100014: Flashlight:rim
+    100016: Flashlight:transform1
+    100018: Flashlight:transform2
+    100020: Flashlight:transform3
+    100022: Flashlight:transform4
+    100024: Flashlight:transform5
+    100026: GuardDog
+    100028: //RootNode
+    100030: Head
+    100032: Head_end
+    100034: HIP_CTRL
+    100036: HIPS
+    100038: L_Ankle
+    100040: L_ARM_CTRL
+    100042: L_ARM_IK
+    100044: L_Collar
+    100046: L_Foot
+    100048: L_LEG_CTRL
+    100050: L_LEG_IK
+    100052: L_LO_Arm
+    100054: L_LO_Leg
+    100056: L_Toe
+    100058: L_UP_Arm
+    100060: L_UP_Leg
+    100062: L_Wrist
+    100064: L_Wrist_end
+    100066: left
+    100068: Neck_01
+    100070: polySurface3
+    100072: R_Ankle
+    100074: R_ARM_CTRL
+    100076: R_ARM_IK
+    100078: R_Collar
+    100080: R_Foot
+    100082: R_LEG_CTRL
+    100084: R_LEG_IK
+    100086: R_LO_Arm
+    100088: R_LO_Leg
+    100090: R_Toe
+    100092: R_UP_Arm
+    100094: R_UP_Leg
+    100096: R_Wrist
+    100098: R_Wrist_end
+    100100: Spine_01
+    100102: Spine_02
+    100104: Spine_03
+    100106: SPINE_CURVE_IK
+    100108: SPINE_IK
+    400000: back
+    400002: bottom
+    400004: Flashlight:button
+    400006: Flashlight:dome
+    400008: Flashlight:light
+    400010: Flashlight:polySurface1
+    400012: Flashlight:polySurface2
+    400014: Flashlight:rim
+    400016: Flashlight:transform1
+    400018: Flashlight:transform2
+    400020: Flashlight:transform3
+    400022: Flashlight:transform4
+    400024: Flashlight:transform5
+    400026: GuardDog
+    400028: //RootNode
+    400030: Head
+    400032: Head_end
+    400034: HIP_CTRL
+    400036: HIPS
+    400038: L_Ankle
+    400040: L_ARM_CTRL
+    400042: L_ARM_IK
+    400044: L_Collar
+    400046: L_Foot
+    400048: L_LEG_CTRL
+    400050: L_LEG_IK
+    400052: L_LO_Arm
+    400054: L_LO_Leg
+    400056: L_Toe
+    400058: L_UP_Arm
+    400060: L_UP_Leg
+    400062: L_Wrist
+    400064: L_Wrist_end
+    400066: left
+    400068: Neck_01
+    400070: polySurface3
+    400072: R_Ankle
+    400074: R_ARM_CTRL
+    400076: R_ARM_IK
+    400078: R_Collar
+    400080: R_Foot
+    400082: R_LEG_CTRL
+    400084: R_LEG_IK
+    400086: R_LO_Arm
+    400088: R_LO_Leg
+    400090: R_Toe
+    400092: R_UP_Arm
+    400094: R_UP_Leg
+    400096: R_Wrist
+    400098: R_Wrist_end
+    400100: Spine_01
+    400102: Spine_02
+    400104: Spine_03
+    400106: SPINE_CURVE_IK
+    400108: SPINE_IK
+    2300000: Flashlight:polySurface2
+    2300002: polySurface3
+    3300000: Flashlight:polySurface2
+    3300002: polySurface3
+    4300000: polySurface3
+    4300002: GuardDog
+    4300004: Flashlight:polySurface2
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: GuardDog
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

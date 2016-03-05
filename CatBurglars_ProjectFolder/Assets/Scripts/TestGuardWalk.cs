@@ -34,15 +34,16 @@ public class TestGuardWalk : MonoBehaviour {
         {
             spottedText.text = "Detection Status: Spotted!";
 			source.Play();
-            agent.speed = 20;
+            agent.speed = 15;
             agent.destination = player.position;
+            //agent.SetDestination(player.position);
         } 
     }
 
     void OnTriggerExit(Collider other)
     {
         // If the player leaves the trigger zone...
-        if (other.gameObject == player)
+        if (other.transform.gameObject.tag == "Player")
         {
             GotoNextPoint();
         }
@@ -74,43 +75,4 @@ public class TestGuardWalk : MonoBehaviour {
             GotoNextPoint();
     }
 
-    /* IEnumerator NewChase()
-     {
-         if (agent.remainingDistance < 0.5f)
-         {
-             GotoNextPoint();
-             yield return new WaitForSeconds(.25f);
-         }
-
-         /*if (reached == false)
-         {
-             yield return new WaitForSeconds(1f);
-             agent.SetDestination(destination.position);
-             //agent.SetDestination(patrolDestinations[patrolCount].position);
-         }
-         else {
-             reached = false;
-             Debug.Log("Let's do this shit");
-             yield return new WaitForSeconds(1f);
-             agent.SetDestination(destination2.position);
-             //agent.SetDestination(patrolDestinations[patrolCount].position);
-         }  8/
-
-        /* if(patrolCount == 1)
-         {
-             patrolCount = 0;
-             Debug.Log(patrolCount);
-             yield return new WaitForSeconds(1f);
-             //patrolCount = 0;
-             agent.SetDestination(patrolDestinations[patrolCount].position);
-         }
-         else
-         {
-             patrolCount = 1;
-             Debug.Log(patrolCount);
-             yield return new WaitForSeconds(1f);
-             //patrolCount = 1;
-             agent.SetDestination(patrolDestinations[patrolCount].position);
-         } 
-     }  */
 }
