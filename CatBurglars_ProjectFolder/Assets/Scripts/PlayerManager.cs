@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class PlayerManager : MonoBehaviour {
@@ -48,11 +49,6 @@ public class PlayerManager : MonoBehaviour {
 
 			}	
 
-			/* if (col.transform.gameObject.tag == "Exit")
-            {
-                Debug.Log("Game is over!!!");
-                Death();
-            } */
 		} 
 	
 	}
@@ -63,7 +59,7 @@ public class PlayerManager : MonoBehaviour {
 
         {
             Debug.Log("Game is over!!!");
-            Death();
+            Win();
         }
     } 
 
@@ -88,11 +84,15 @@ public class PlayerManager : MonoBehaviour {
         }
     }
 
+
     void Death()
     {
-        Destroy(this.gameObject);
-        Debug.Log("Application load game over screen");
-        //Application.LoadLevel("Tevin (test area)");
+        SceneManager.LoadScene(3);
+    }
+
+    void Win()
+    {
+        SceneManager.LoadScene(2);
     }
 
     IEnumerator HowToPlay()
